@@ -1,0 +1,20 @@
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: navy;
+    margin-left: 20px;
+  }
+
+#foot {
+    border: 5px outset red;
+    background-color: green;
+    align-content: center;
+    text-align: center;
+    width: 400px; 
+    height: 100px;
+    position: absolute;
+    left: 40%;
+    top: 70%;
+  }
