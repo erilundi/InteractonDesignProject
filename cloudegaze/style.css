@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Hide scrollbars */
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none; -o-user-select:none;
 }
 .svgbox {
     display: grid;
@@ -10,4 +12,38 @@
     max-width: 100vw;
     max-height: 100vh;
     margin: auto;
+}
+
+svg {
+    position: absolute;
+  }
+
+.star{
+    z-index: -1;
+}
+
+.z-minus{
+    z-index: -2;
+}
+
+#starsFound{
+    left: 68.6vw;
+    top: 4.7vh;
+}
+
+#introText{
+    left: 26vw;
+    top: 4.7vh;
+}
+
+.titleText{
+    position: fixed;
+    font-size: 4.5vh;
+}
+
+#star1{
+    position: fixed;
+    left: 2.5vw;
+    top: 69vh;
+    width: 6vh;
 }
