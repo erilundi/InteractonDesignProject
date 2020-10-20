@@ -44,9 +44,11 @@ function populateHighScores() {
     document.getElementById("highScores").appendChild(createHighScoreList(highScores));
 }
 
-//Store the new highscore list (currently purging the old storage)
+//Store the new highscore list by removing the old and adding the new
 function localStoreHighScores() {
-    window.localStorage.clear();
+    for (let i = 0; i < highScores.length; i++) {
+        window.localStorage.removeItem(i);
+    }
     for (let i = 0; i < highScores.length; i++) {
         window.localStorage.setItem(i + 1, JSON.stringify(highScores[i]));
     }
@@ -54,7 +56,7 @@ function localStoreHighScores() {
 
 //Make sure value is valid
 function addToHighScoreList(name, timeSec, timeMin) {
-    if (highScores.length <= amountOfHighScores) {
+    if (highScores.length < amountOfHighScores) {
         highScores[highScores.length] = { playerName: name, timeMin: Number(1), timeSec: Number(timeSec) };
         highScores = insertionSort(highScores);
     } else if(highScores[9].timeMin * 60 + highScores[9].timeSec < timeMin*60 + timeSec){
@@ -92,3 +94,8 @@ function storeNewScore() {
 
     console.log("Nytt highscore added!" + highScores.length)
 }
+
+function writeTime(){
+    document.getElementById("time").innerText = getTime().timeMin + "min : " + getTime().timeSec + "s";
+}
+

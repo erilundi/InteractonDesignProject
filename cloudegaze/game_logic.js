@@ -36,7 +36,7 @@ function increseStarCounter() {
     foundStarCount++;
     document.getElementById("starsFound").innerText = foundStarCount + "/" + numberOfStars;
     if(foundStarCount == numberOfStars){
-        //stopTimer();
+        stopTimer();
         window.location.href = "highscore.html";
     }
 }

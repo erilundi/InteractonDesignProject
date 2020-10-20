@@ -7,12 +7,12 @@
     <script src="../timer.js" type="text/javascript"></script>
 </head>
 
-<body onload="populateHighScores(), printTimer()">
+<body onload="populateHighScores(); writeTime();">
     <h>High Score</h>
     <br>
     <label for="fname">First name:</label>
     <input type="text" placeholder="Skriv in ditt namn" id="inputName">
-    <input type="text" placeholder="Skriv din tid" id="timeSec">
+    <p id="time">? min ? sec</p>
 
     <div id="highScores"></div>
 
