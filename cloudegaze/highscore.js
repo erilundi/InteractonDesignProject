@@ -3,6 +3,8 @@ var highScores = [];
 
 var amountOfHighScores = 10;
 
+
+//Creates a html list to be presented
 function createHighScoreList(valuesArray) {
     var highScoreList = document.createElement('ol');
 
@@ -19,7 +21,6 @@ function createHighScoreList(valuesArray) {
         }
     }
     return highScoreList;
-
 }
 
 //Add values to the highscore list from local storage
@@ -87,15 +88,11 @@ function addToHighScoreList(name, timeSec, timeMin) {
 //Store highScores
 function storeNewScore() {
     var input = document.getElementById("inputName").value;
-    var timeSec = document.getElementById("timeSec").value;
 
-    addToHighScoreList(input, timeSec, 1);
+    addToHighScoreList(input, getTime().timeMin, getTime().timeMin);
     localStoreHighScores();
-
-    console.log("Nytt highscore added!" + highScores.length)
 }
 
 function writeTime(){
     document.getElementById("time").innerText = getTime().timeMin + "min : " + getTime().timeSec + "s";
 }
-

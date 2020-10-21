@@ -36,6 +36,19 @@ svg {
     top: 4.7vh;
 }
 
+#inputName{
+    left: 7vw;
+    top: 20vh;
+}
+
+#highScores{
+    position: fixed;
+    font-size: 4.5vh;
+    left: 49vw;
+    top: 22vh;
+    line-height: 1.36;
+}
+
 .titleText{
     position: fixed;
     font-size: 4.5vh;
@@ -46,4 +59,8 @@ svg {
     left: 2.5vw;
     top: 69vh;
     width: 6vh;
+}
+
+.pointer{
+    cursor: pointer;
 }
