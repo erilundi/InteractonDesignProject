@@ -51,9 +51,13 @@ function initializeDescription() {
 function increseStarCounter() {
     foundStarCount++;
     document.getElementById("starsFound").innerText = foundStarCount + "/" + numberOfStars;
+}
+
+function checkWin(){
     if(foundStarCount == numberOfStars){
         stopTimer();
-        window.location.href = "heatmap.html";
+
+        document.getElementById("congratz").style.display = "block";
     }
 }
 
