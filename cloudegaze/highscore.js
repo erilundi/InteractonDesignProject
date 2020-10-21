@@ -56,11 +56,11 @@ function localStoreHighScores() {
 }
 
 //Make sure value is valid
-function addToHighScoreList(name, timeSec, timeMin) {
+function addToHighScoreList(name, timeMin, timeSec) {
     if (highScores.length < amountOfHighScores) {
-        highScores[highScores.length] = { playerName: name, timeMin: Number(1), timeSec: Number(timeSec) };
+        highScores[highScores.length] = { playerName: name, timeMin: Number(timeMin), timeSec: Number(timeSec) };
         highScores = insertionSort(highScores);
-    } else if(highScores[9].timeMin * 60 + highScores[9].timeSec < timeMin*60 + timeSec){
+    } else if (highScores[9].timeMin * 60 + highScores[9].timeSec < timeMin * 60 + timeSec) {
         highScores[9] = { playerName: name, timeMin: Number(1), timeSec: Number(timeSec) };
         highScores = insertionSort(highScores);
     }
@@ -87,12 +87,33 @@ function addToHighScoreList(name, timeSec, timeMin) {
 
 //Store highScores
 function storeNewScore() {
-    var input = document.getElementById("inputName").value;
+    var stored = false;
+    stored = window.sessionStorage.getItem("stored");
+    if (!stored) {
+        var input = document.getElementById("inputName").value;
 
-    addToHighScoreList(input, getTime().timeMin, getTime().timeMin);
-    localStoreHighScores();
+        if (!(input == "")) {
+            addToHighScoreList(input, getTime().timeMin, getTime().timeSec);
+            localStoreHighScores();
+        }
+        
+        window.sessionStorage.setItem("stored", "true");
+        document.getElementById("saveButton").style.fill = "#9E9E9E";
+        document.getElementById("saveButtonText").style.fill = "#D0D0D0";
+        document.getElementById("saveButtonText").style.cursor = "default";
+        document.getElementById("saveButton").style.cursor = "default";
+        document.getElementById("inputName").value = "";
+        document.getElementById("inputName").placeholder = "Sparat!";
+        document.getElementById("inputName").disabled = true;
+    }
 }
 
-function writeTime(){
-    document.getElementById("time").innerText = getTime().timeMin + "min : " + getTime().timeSec + "s";
+function checkStored() {
+    var stored = false;
+    stored = window.sessionStorage.getItem("stored");
+    if (stored) {
+        document.getElementById("saveButtonText").style.display= "none";
+        document.getElementById("saveButton").style.display= "none";
+        document.getElementById("inputName").style.display= "none";
+    }
 }

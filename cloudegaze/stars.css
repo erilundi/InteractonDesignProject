@@ -1,0 +1,24 @@
+.star{
+    z-index: -1;
+}
+
+#star1{
+    position: fixed;
+    left: 2.5vw;
+    top: 69vh;
+    width: 6vh;
+}
+
+#star2{
+    position: fixed;
+    left: 5.5vw;
+    top: 69vh;
+    width: 6vh;
+}
+
+#star3{
+    position: fixed;
+    left: 8.5vw;
+    top: 69vh;
+    width: 6vh;
+}

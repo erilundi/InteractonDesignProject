@@ -1,5 +1,5 @@
 var foundStarCount = 0;
-var numberOfStars = 1;
+var numberOfStars = 2;
 var stars = [];
 
 window.onload = function randomizeStars() {
@@ -9,27 +9,43 @@ window.onload = function randomizeStars() {
         stars[stars.length] = elem[i].id;
     }
 
-    //hideAllStars();
+    hideAllStars();
     showDesiredAmountOfStars();
-    initializeStarCounter();
+    initializeDescription();
+}
+
+function getRandomNumber(max, min){
+    return Math.floor(Math.random() * ((max-1) - min + 1)) + min;
 }
 
 function showDesiredAmountOfStars() {
-    var randomnumber = 0;
-    for (let i = 0; i <= numberOfStars; i++) {
-        randomnumber = Math.floor(Math.random() * ((numberOfStars-1) - 0 + 1)) + 0;
-        showStar(stars[randomnumber])
+    let NoOne = new Array();
+    for (let i=0; i<stars.length; ++i) {
+       NoOne.push(i);
+    }
+    NoOne = NoOne.sort(() => Math.random() - 0.5);
+
+    if(numberOfStars <= stars.length){
+        for (let i = 0; i < numberOfStars; i++) {
+            showStar(stars[NoOne[i]]);   
+        }
+    }else{
+        for (let i = 0; i < stars.length; i++) {
+            showStar(stars[NoOne[i]]);   
+        }
     }
 }
 
 function hideAllStars() {
-    for (let i = 0; i <= stars.length; i++) {
+    for (let i = 0; i < stars.length; i++) {
         hideStar(stars[i]);
     }
 }
 
-function initializeStarCounter() {
+function initializeDescription() {
     document.getElementById("starsFound").innerText = "0/" + numberOfStars;
+    document.getElementById("introText").innerText =  "Hitta " + numberOfStars + " stjärnor så snabbt som möjligt";
+    document.getElementById("introText2").innerText =  "Hitta " + numberOfStars + " stjärnor så snabbt som möjligt";
 }
 
 function increseStarCounter() {
@@ -61,4 +77,6 @@ function hideStar(starId) {
 function removeDescription(){
     document.getElementById("description").style.display = "none";
     document.getElementById("descriptionWhite").style.display = "none";
+    document.getElementById("introText2").style.display = "none";
+    window.sessionStorage.removeItem("stored")
 }
