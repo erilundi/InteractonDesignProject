@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
 
@@ -49,6 +49,7 @@ a {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
 }
 
 .fixed-top {
@@ -78,6 +79,64 @@ a {
 
 /*Pages*/
 
+.title{
+    position: absolute;
+    width: 300px;
+    height: 56px;
+    left: 73px;
+    padding-top: 10px;
+    padding-bottom: 100px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 56px;
+
+    color: #646C96;
+}
+
+#game{
+    background-color: #F3F5FF;
+    margin-top: 75px;
+    height: 450px;
+}
+
+
+
+#about{
+
+    background-color: #F3F5FF;
+    height: 550px;
+}
+
+#process{
+    background-color: #F3F5FF;
+    height: 420px;
+}
+
+#team{
+    background-color: #DBE4D4;
+    height: 350px;
+}
+
+#play_button{
+    text-align: center;
+    padding-top: 50px;
+}
+
+#logoBig{
+    text-align: center;
+    padding-top: 70px;
+}
+
+.link{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #646C96;
+}
+
+/*
 .home-section, .about-section, .blog-section, .contact-section {
     height: 70vh;
     width: 100vw;
@@ -89,6 +148,114 @@ a {
     text-align: center;
     grid-template-rows: 100px 100px;
 }
+*/
+
+#processTitle{
+    margin-top: 30px;
+}
+
+
+
+.aboutPic{
+    position: absolute;
+    width: 370px;
+    height: 210px;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+#stars{
+    margin-top: -50px;
+    text-align: center;
+}
+
+#dog{
+    margin-top: -380px;
+    text-align: right;
+}
+
+#fillGreen{
+    margin-top: -200px;
+    background-color: #DBE4D4;
+    height: 300px;
+}
+
+#aboutPicture1{
+    left: 73px;
+}
+
+#aboutPicture2{
+    left: 535px;
+}
+
+#aboutPicture3{
+    left: 997px;
+}
+
+.aboutHeaders{
+    position: absolute;
+    width: 370px;
+    height: 117px;
+    left: 0px;
+    top: 230px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 25px;
+    text-align: left;
+
+    color: #000000;
+}
+
+.fontText{
+    position: absolute;
+    width: 370px;
+    height: 117px;
+    top: 265px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+
+    color: #000000;
+}
+
+.aboutPicture{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.projectTitle{
+    margin-top: 30px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    /*float: left; */
+  /*  top: 600px; */
+    position: absolute;
+    width: 370px;
+    margin-top: 90px;
+  /*  width: 33.33%;
+    padding: 10px;
+    height: 300px; *//* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 .eyeBox {
     width: 100%;
@@ -147,24 +314,28 @@ a {
     display: block;
 }
 
-.contact-picture {
-    width: 200px;
-    height: 200px;
+
+.ourNames{
+    ont-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    text-align: center;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: auto;
-    background-color: #2196F3;
     padding: 10px;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    margin-top: 50px;
 }
 
 /* Tablet */
