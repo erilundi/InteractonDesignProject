@@ -37,7 +37,7 @@ function increseStarCounter() {
     document.getElementById("starsFound").innerText = foundStarCount + "/" + numberOfStars;
     if(foundStarCount == numberOfStars){
         stopTimer();
-        window.location.href = "highscore.html";
+        window.location.href = "heatmap.html";
     }
 }
 
