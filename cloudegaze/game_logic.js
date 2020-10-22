@@ -56,6 +56,7 @@ function increseStarCounter() {
 function checkWin(){
     if(foundStarCount == numberOfStars){
         stopTimer();
+        saveHeatmap();
 
         document.getElementById("congratz").style.display = "block";
     }

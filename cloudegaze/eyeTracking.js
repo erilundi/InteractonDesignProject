@@ -6,6 +6,7 @@ function StartEyeTracking(){
 }
 function startHeatmap(){
     ShowHeatMap();
+    hideHeatmap();
 }
 
 function hideHeatmap(){
@@ -16,11 +17,12 @@ function hideHeatmap(){
  }
  function saveHeatmap(){
    savedHeatMapCanvas = heatmap.getData();;
+   window.sessionStorage.setItem("heat", JSON.stringify(savedHeatMapCanvas));
    RemoveHeatMap();
  }
- function showOldCanvas(){
-    ShowHeatMap();
-   heatmap.setData(savedHeatMapCanvas);
+ function showOldCanvas(data){
+   ShowHeatMap();
+   heatmap.setData(data);
  }
 
 /*function PlotGaze(GazeData) {

@@ -13,9 +13,6 @@
     max-height: 100vh;
     margin: auto;
 }
-.helpScreen {
-    z-index: 6;
-}
 
 svg {
     position: absolute;
@@ -23,6 +20,13 @@ svg {
 
 .z-minus{
     z-index: -2;
+}
+
+.infoText{
+    font-style: roboto;
+    color:black;
+    font-weight: bold;
+
 }
 
 #starsFound{
