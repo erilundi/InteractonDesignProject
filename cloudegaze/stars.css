@@ -11,14 +11,202 @@
 
 #star2{
     position: fixed;
-    left: 5.5vw;
-    top: 69vh;
-    width: 6vh;
+    left: 42.8vw;
+    top: 88vh;
+    width: 3vh;
+    fill: black;
+    stroke-width: 0.15vh;
+    stroke: #F7A850;
 }
 
 #star3{
     position: fixed;
-    left: 8.5vw;
-    top: 69vh;
-    width: 6vh;
+    left: 50.5vw;
+    top: 60.3vh;
+    width: 4vh;
+    fill: #CEB854;
+    stroke-width: 0.15vh;
+    stroke: black;
+    transform: rotate(25deg);
+}
+
+#star4{
+    position: fixed;
+    left: 57.5vw;
+    top: 60.3vh;
+    width: 3.5vh;
+    fill: #9FB0D2;
+    stroke-width: 0.15vh;
+    stroke: black;
+    transform: rotate(40deg);
+}
+
+#star5{
+    position: fixed;
+    left: 75.7vw;
+    top: 46.7vh;
+    width: 2.5vh;
+    fill: #000000;
+    stroke-width: 0.4vh;
+    stroke: #FFFFFF;
+    transform: rotate(42deg);
+}
+
+#star6{
+    position: fixed;
+    left: 83.5vw;
+    top: 71.3vh;
+    width: 2.5vh;
+    fill: #5B5675;
+    stroke-width: 0.2vh;
+    stroke: #000000;
+}
+
+#star7{
+    left: 55.5vw;
+    top: 20.8vh;
+    width: 4vh;
+    fill: #FFFFFF;
+    stroke-width: 0.13vh;
+    stroke: #000000;
+}
+
+#star8{
+    position: fixed;
+    left: 24vw;
+    top: 23vh;
+    width: 3vh;
+    fill: #AEC4A8;
+    stroke-width: 0.15vh;
+    stroke: #000000;
+}
+
+#star9{
+    position: fixed;
+    left: 87vw;
+    top: 28.1vh;
+    width: 3vh;
+    fill: #5C5D61;
+    stroke-width: 0.25vh;
+    stroke: #E91414;
+    transform: rotate(30deg);
+}
+
+#star10{
+    position: fixed;
+    left: 13.4vw;
+    top: 46.7vh;
+    width: 2.5vh;
+    fill: #D6D2C7;
+    stroke-width: 0.2vh;
+    stroke: #000000;
+}
+
+#star11{
+    position: fixed;
+    left: 57.1vw;
+    top: 70vh;
+    width: 3vh;
+    fill: #B37659;
+    stroke-width: 0.2vh;
+    stroke: #000000;
+}
+
+#star12{
+    position: fixed;
+    left: 14.65vw;
+    top: 90.2vh;
+    width: 2.2vh;
+    fill: #000000;
+    transform: rotate(42deg);
+}
+
+#star13{
+    position: fixed;
+    left: 26.85vw;
+    top: 81.5vh;
+    width: 2.5vh;
+    fill: #EDE40B;
+    stroke-width: 0.2vh;
+    stroke: #000000;
+}
+
+#star14{
+    position: fixed;
+    left: 43.2vw;
+    top: 20.7vh;
+    width: 5vh;
+    fill: #8C2726;
+    stroke-width: 0.2vh;
+    stroke: #000000;
+    transform: rotate(120deg);
+}
+
+#star15{
+    position: fixed;
+    left: 33vw;
+    top: 36.3vh;
+    width: 4vh;
+    fill: #4F3734;
+    stroke-width: 0.2vh;
+    stroke: #000000;
+}
+
+#star16{
+    position: fixed;
+    left: 80.8vw;
+    top: 9.2vh;
+    width: 3vh;
+    fill: #EAE339;
+    stroke-width: 0.15vh;
+    stroke: #646C96;
+    transform: rotate(42deg);
+}
+
+#star17{
+    position: fixed;
+    left: 73.8vw;
+    top: 30vh;
+    width: 3vh;
+    fill: #E8E8E8;
+    stroke-width: 0.1vh;
+    stroke: #000000;
+}
+
+#star18{
+    position: fixed;
+    left: 25.5vw;
+    top: 71.4vh;
+    width: 1.5vh;
+    fill: #625F5D;
+}
+
+#star19{
+    position: fixed;
+    left: 88vw;
+    top: 65vh;
+    width: 3vh;
+    fill: #AF7E5B;
+    stroke-width: 0.2vh;
+    stroke: #000000;
+}
+
+#star20{
+    position: fixed;
+    left: 76vw;
+    top: 70vh;
+    width: 4vh;
+    fill: #538F6E;
+    stroke-width: 0.1vh;
+    stroke: #000000;
+}
+
+#star21{
+    position: fixed;
+    left: 43.7vw;
+    top: 51.1vh;
+    width: 2.3vh;
+    fill: #C4C4C4;
+    stroke-width: 0.1vh;
+    stroke: #000000;
 }

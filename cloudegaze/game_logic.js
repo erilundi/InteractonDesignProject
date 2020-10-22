@@ -1,5 +1,5 @@
 var foundStarCount = 0;
-var numberOfStars = 2;
+var numberOfStars = 6;
 var stars = [];
 
 window.onload = function randomizeStars() {
