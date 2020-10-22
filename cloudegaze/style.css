@@ -16,6 +16,9 @@
 .helpScreen {
     z-index: 6;
 }
+.priority {
+    z-index: 10;
+}
 
 svg {
     position: absolute;
