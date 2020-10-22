@@ -1,13 +1,36 @@
-<script src="https://api.gazerecorder.com/GazeCloudAPI.js" ></script>
 
-function PlotGaze(GazeData) {
+var savedHeatMapCanvas;
+
+function StartEyeTracking(){
+    GazeCloudAPI.StartEyeTracking();
+}
+function startHeatmap(){
+    ShowHeatMap();
+}
+
+function hideHeatmap(){
+    document.getElementById("heatmapContainerWrapper").style.visibility = 'hidden';
+ }
+ function showHeatmapWithoutRemoving(){
+   document.getElementById("heatmapContainerWrapper").style.visibility = 'visible';
+ }
+ function saveHeatmap(){
+   savedHeatMapCanvas = heatmap.getData();;
+   RemoveHeatMap();
+ }
+ function showOldCanvas(){
+    ShowHeatMap();
+   heatmap.setData(savedHeatMapCanvas);
+ }
+
+/*function PlotGaze(GazeData) {
 
     /*
     GazeData.state // 0: valid gaze data; -1 : face tracking lost, 1 : gaze uncalibrated
     GazeData.docX // gaze x in document coordinates
     GazeData.docY // gaze y in document cordinates
     GazeData.time // timestamp
-    */
+    
 
 
     document.getElementById("GazeData").innerHTML = "GazeX: " + GazeData.GazeX + " GazeY: " + GazeData.GazeY;
@@ -37,12 +60,12 @@ function PlotGaze(GazeData) {
             gaze.style.display = 'block';
     }
 
-}
+}*/
 
 //////set callbacks/////////
 
-GazeCloudAPI.OnCalibrationComplete = function () { console.log('gaze Calibration Complete') }
-GazeCloudAPI.OnCamDenied = function () { console.log('camera  access denied') }
-GazeCloudAPI.OnError = function (msg) { console.log('err: ' + msg) }
-GazeCloudAPI.UseClickRecalibration = true;
-GazeCloudAPI.OnResult = PlotGaze; 
+//GazeCloudAPI.OnCalibrationComplete = function () { console.log('gaze Calibration Complete') }
+//GazeCloudAPI.OnCamDenied = function () { console.log('camera  access denied') }
+//GazeCloudAPI.OnError = function (msg) { console.log('err: ' + msg) }
+//GazeCloudAPI.UseClickRecalibration = true;
+//GazeCloudAPI.OnResult = PlotGaze; 

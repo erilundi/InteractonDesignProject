@@ -2,7 +2,7 @@ var foundStarCount = 0;
 var numberOfStars = 6;
 var stars = [];
 
-window.onload = function randomizeStars() {
+function randomizeStars() {
     //fetch all the stars
     var elem = document.getElementsByClassName('star');
     for (var i = 0; i < elem.length; i++) {
