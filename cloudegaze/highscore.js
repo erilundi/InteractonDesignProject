@@ -60,8 +60,8 @@ function addToHighScoreList(name, timeMin, timeSec) {
     if (highScores.length < amountOfHighScores) {
         highScores[highScores.length] = { playerName: name, timeMin: Number(timeMin), timeSec: Number(timeSec) };
         highScores = insertionSort(highScores);
-    } else if (highScores[9].timeMin * 60 + highScores[9].timeSec < timeMin * 60 + timeSec) {
-        highScores[9] = { playerName: name, timeMin: Number(1), timeSec: Number(timeSec) };
+    } else if ((highScores[9].timeMin * 60 + highScores[9].timeSec) > timeMin * 60 + timeSec) {
+        highScores[9] = { playerName: name, timeMin: Number(timeMin), timeSec: Number(timeSec) };
         highScores = insertionSort(highScores);
     }
 
